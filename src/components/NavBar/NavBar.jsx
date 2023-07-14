@@ -19,7 +19,7 @@ function NavBar() {
         <Link className="anchor" to="/products/accesorios">
           Accesorios
         </Link>
-        <Link className="anchor">
+        <Link className="anchor" to="/shopping">
           <CartWidget />
         </Link>
       </ul>
