@@ -1,0 +1,12 @@
+.carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.number {
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: blueviolet;
+}

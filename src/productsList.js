@@ -1,0 +1,68 @@
+const productsList = [
+  {
+    id: 1,
+    name: "Café de Colombia",
+    cantidad: "500 g",
+    precio: "$900",
+    img: "https://www.mdzol.com/u/fotografias/m/2021/4/8/f848x477-1041350_1099153_5050.jpg",
+    category: "cafe",
+  },
+  {
+    id: 2,
+    name: "Café de Ecuador",
+    cantidad: "500 g",
+    precio: "$800",
+    img: "https://st2.depositphotos.com/1000393/12360/i/600/depositphotos_123609844-stock-photo-espresso-and-coffee-grain.jpg",
+    category: "cafe",
+  },
+  {
+    id: 3,
+    name: "Cafetera V60",
+    cantidad: "1",
+    precio: "$1500",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7uTQ-oCQ9If3tFK1RwIbk_c7dChJc0SCzt57lvZv6yBBF87k9W42NtlpjvT6pVckBE8M&usqp=CAU",
+    category: "accesorios",
+  },
+  {
+    id: 4,
+    name: "Café de Etiopía",
+    cantidad: "500 g",
+    precio: "$1000",
+    img: "https://cdn2.incapto.com/wp-content/uploads/2022/07/cafe-etiopia-origen-produccion-y-procesamiento.jpg",
+    category: "cafe",
+  },
+  {
+    id: 5,
+    name: "Aeropress",
+    cantidad: "1",
+    precio: "$1200",
+    img: "https://jolkshop.com/wp-content/uploads/2021/08/aeropress-go-2.jpg",
+    category: "accesorios",
+  },
+  {
+    id: 6,
+    name: "Prensa francesa",
+    cantidad: "1",
+    precio: "$1400",
+    img: "https://cdn.shopify.com/s/files/1/0003/3836/2377/files/DSCF2591_large.jpg?v=1532618070",
+    category: "accesorios",
+  },
+  {
+    id: 7,
+    name: "Molinillo eléctrico",
+    cantidad: "1",
+    precio: "$3000",
+    img: "https://www.bazardelcocinero.com.uy/wp-content/uploads/2022/03/molino-de-cafe-con-muela-conica-electrico-shardor-600x600.jpg.webp",
+    category: "accesorios",
+  },
+  {
+    id: 8,
+    name: "Café de Brazil",
+    cantidad: "500 g",
+    precio: "$500",
+    img: "https://static.vecteezy.com/system/resources/previews/016/069/986/large_2x/brazil-flag-on-coffee-bean-import-export-trade-online-commerce-concept-flag-on-coffee-bean-import-export-trade-online-commerce-concept-photo.jpg",
+    category: "cafe",
+  },
+];
+
+export default productsList
