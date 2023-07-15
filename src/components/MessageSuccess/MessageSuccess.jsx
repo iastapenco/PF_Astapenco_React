@@ -1,16 +1,15 @@
 import React from "react";
-import Alert from "@mui/material/Alert";
-import Stack from "@mui/material/Stack";
+import Swal from "sweetalert2";
 
 const MessageSuccess = ({ purchaseID }) => {
-  return (
-    <Stack sx={{ width: "100%" }} spacing={2}>
-      <Alert severity="success">
-        Gracias por su compra. Su id de transacción es : {purchaseID}. Recuerde
-        guardarlo por cualquier consulta
-      </Alert>
-    </Stack>
-  );
+  return Swal.fire({
+    position: "center",
+    width: "300px",
+    icon: "success",
+    title: "Su compra fue exitosa",
+    html: `<h4>Su ID de transacción es: ${purchaseID}. Recuerde guardarlo por cualquier consulta</h4>`,
+    showConfirmButton: true,
+  });
 };
 
 export default MessageSuccess;

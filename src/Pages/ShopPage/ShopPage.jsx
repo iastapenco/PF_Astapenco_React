@@ -6,6 +6,7 @@ import Stack from "@mui/material/Stack";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import MessageSuccess from "../../components/MessageSuccess/MessageSuccess";
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import "./ShopPage.css";
 
 const initialState = {
@@ -19,6 +20,7 @@ const initialState = {
 const ShopPage = () => {
   const [values, setValues] = useState(initialState);
   const [purchaseID, setPurchaseID] = useState(null);
+  const [error, setError] = useState(false);
 
   const handleOnChange = (e) => {
     const { value, name } = e.target;
@@ -27,9 +29,13 @@ const ShopPage = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const docRef = await addDoc(collection(db, "compras"), { values });
-    setPurchaseID(docRef.id);
-    setValues(initialState);
+    if (values.email === values.emailConfirm) {
+      const docRef = await addDoc(collection(db, "compras"), { values });
+      setPurchaseID(docRef.id);
+      setValues(initialState);
+    } else {
+      setError(true);
+    }
   };
 
   return (
@@ -82,6 +88,7 @@ const ShopPage = () => {
       </form>
 
       {purchaseID ? <MessageSuccess purchaseID={purchaseID} /> : null}
+      {error ? <ErrorMessage /> : null}
     </div>
   );
 };
