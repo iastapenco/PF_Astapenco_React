@@ -9,6 +9,12 @@ const ErrorMessage = () => {
     title: "No se pudo completar su compra",
     html: `<h4>Su e-mail y su e-mail de confirmación no coinciden</h4>`,
     showConfirmButton: true,
+  }).then((resp) => {
+    if (resp.isConfirmed) {
+      window.location.reload();
+    } else {
+      window.location.reload();
+    }
   });
 };
 

@@ -9,6 +9,12 @@ const MessageSuccess = ({ purchaseID }) => {
     title: "Su compra fue exitosa",
     html: `<h4>Su ID de transacción es: ${purchaseID}. Recuerde guardarlo por cualquier consulta</h4>`,
     showConfirmButton: true,
+  }).then((resp) => {
+    if (resp.isConfirmed) {
+      window.location.reload();
+    } else {
+      window.location.reload();
+    }
   });
 };
 
