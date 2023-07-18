@@ -72,24 +72,30 @@ const CardProducts = ({ data }) => {
           </Typography>
           <div className="btn">
             {quantityPerProduct === 0 ? (
-              <button className="item-add-button" onClick={() => addToCart()}>
+              <button
+                className="product-add-button"
+                onClick={() => addToCart()}
+              >
                 + Agregar al carrito
               </button>
             ) : (
-              <button className="item-plus-button" onClick={() => addToCart()}>
+              <button
+                className="product-plus-button"
+                onClick={() => addToCart()}
+              >
                 + Agregar uno más
               </button>
             )}
             {quantityPerProduct > 0 && (
               <button
-                className="item-minus-button"
+                className="product-minus-button"
                 onClick={() => removeProduct(data.id)}
               >
                 Eliminar producto
               </button>
             )}
             {quantityPerProduct > 0 && (
-              <div className="item-quantity">{quantityPerProduct}</div>
+              <div className="product-quantity">{quantityPerProduct}</div>
             )}
           </div>
         </CardContent>

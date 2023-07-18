@@ -14,7 +14,6 @@ const CartWidget = () => {
     <div className="carrito">
       <ShoppingCartIcon sx={{ fontSize: "200%" }} />
       <p className="number">{quantity}</p>
-      <p></p>
     </div>
   );
 };
