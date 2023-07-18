@@ -21,3 +21,36 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 15px;
 }
+
+.btn {
+    margin-top: 5px;
+}
+
+.item-add-button {
+    background-color: #5cb85c;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-size: 11px;
+    cursor: pointer;
+    height: 20px;
+
+}
+
+.item-minus-button {
+    background-color: #d9534f;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.item-plus-button {
+    background-color: #337ab7;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-size: 11px;
+    cursor: pointer;
+}

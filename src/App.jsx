@@ -7,19 +7,22 @@ import InicioPage from "./Pages/InicioPage/InicioPage";
 import CategoryPage from "./Pages/CategoryPage/CategoryPage";
 import DetailPage from "./Pages/DetailPage/DetailPage";
 import ShopPage from "./Pages/ShopPage/ShopPage";
+import { ShoppingCartProvider } from "./Context/CartContext";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <div>
-        <Routes>
-          <Route path="/" element={<InicioPage />} />
-          <Route path="/products/:category" element={<CategoryPage />} />
-          <Route path="/product/:id" element={<DetailPage />} />
-          <Route path="/shopping" element={<ShopPage />} />
-        </Routes>
-      </div>
+      <ShoppingCartProvider>
+        <NavBar />
+        <div>
+          <Routes>
+            <Route path="/" element={<InicioPage />} />
+            <Route path="/products/:category" element={<CategoryPage />} />
+            <Route path="/product/:id" element={<DetailPage />} />
+            <Route path="/shopping" element={<ShopPage />} />
+          </Routes>
+        </div>
+      </ShoppingCartProvider>
     </>
   );
 }

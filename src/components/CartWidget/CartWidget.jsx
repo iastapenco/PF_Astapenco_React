@@ -1,14 +1,22 @@
-import React from 'react'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import React, { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./cart_widget.css";
 
 const CartWidget = () => {
-  return (
-    <div className = "carrito">
-      <ShoppingCartIcon sx={{fontSize: "200%"}}/>
-      <p className="number">4</p>
-    </div>
-  )
-}
+  const [cart, setCart] = useContext(CartContext);
 
-export default CartWidget
+  const quantity = cart.reduce((acc, curr) => {
+    return acc + curr.quantity;
+  }, 0);
+
+  return (
+    <div className="carrito">
+      <ShoppingCartIcon sx={{ fontSize: "200%" }} />
+      <p className="number">{quantity}</p>
+      <p></p>
+    </div>
+  );
+};
+
+export default CartWidget;
