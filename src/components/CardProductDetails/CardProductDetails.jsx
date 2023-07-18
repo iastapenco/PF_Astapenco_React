@@ -25,7 +25,13 @@ const CardProducts = ({ data }) => {
       } else {
         return [
           ...currProducts,
-          { id: data.id, quantity: 1, precio: data.precio },
+          {
+            id: data.id,
+            quantity: 1,
+            precio: data.precio,
+            name: data.name,
+            img: data.img,
+          },
         ];
       }
     });

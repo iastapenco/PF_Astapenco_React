@@ -25,8 +25,6 @@ const InicioPage = () => {
 
   return (
     <div className="container">
-      <ListItemContainer greetings="Bienvenido nuevamente" userName="Pedro" />
-
       {products.map((product) => {
         return (
           <div className="product_container">
