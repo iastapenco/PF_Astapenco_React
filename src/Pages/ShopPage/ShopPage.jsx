@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 import FormularioCompras from "../../components/FormularioCompras/FormularioCompras";
+import CartMessageWithProducts from "../../components/CartMessageWithProducts/CartMessageWithProducts";
+import CartMessageWithoutProducts from "../../components/CartMessageWithoutProducts/CartMessageWithoutProducts";
 
 const ShopPage = () => {
   const [cart, setCart] = useContext(CartContext);
@@ -13,7 +15,7 @@ const ShopPage = () => {
     (acc, curr) => acc + curr.quantity * curr.precio,
     0
   );
-  console.log(cart);
+
   return (
     <>
       {!formulario ? (
@@ -47,17 +49,20 @@ const ShopPage = () => {
                 Precio total: ${totalPrice}
               </h3>
             </div>
-
-            <div className="btn-container">
-              <h3>
-                Haz click en "Confirmar compra" para ir al formulario de compras
-              </h3>
-              <button
-                className="btn-checkout"
-                onClick={() => setFormulario(true)}
-              >
-                Confirmar compra
-              </button>
+            {cart.length == 0 ? (
+              <CartMessageWithoutProducts />
+            ) : (
+              <CartMessageWithProducts />
+            )}
+            <div>
+              {cart.length !== 0 ? (
+                <button
+                  className="btn-checkout"
+                  onClick={() => setFormulario(true)}
+                >
+                  Confirmar compra
+                </button>
+              ) : null}
             </div>
           </div>
         </div>
